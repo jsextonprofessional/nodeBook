@@ -9,6 +9,12 @@ app.get("/", (req, res) => {
 	console.log(req.url);
 	console.log(req.que);
 })
+app.get("/items/:vegetable", (req, res) => {
+	res.send(req.params.vegetable);
+});
+app.post("/contact", (req, res) => {
+	res.send("Contact information submitted successfully.");
+});
 .listen(port, () => {
 	console.log(`The Express.js server has started and is listening on port number: ${port}`);
 });
